@@ -1,4 +1,4 @@
-🚀 100 JavaScript Projects
+🚀 JavaScript Projects
 
 Repositório criado para registrar minha jornada de estudos em JavaScript através de projetos práticos.
 
