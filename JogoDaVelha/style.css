@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: ghostwhite;
+    color: dimgray;
+    font-family: serif;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 30px 0 10px;
+}
+
+#container {
+    width: 75vw;
+    height: 75vw;
+
+    max-width: 750px;
+    max-height: 750px;
+
+    min-width: 450px;
+    min-height: 450px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.block {
+    display: contents;
+}
+
+.box {
+    border: 3px solid gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+span {
+    font-size: 75px;
+    font-family: sans-serif;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top {
+    border-top: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.alert {
+    height: 75px;
+    width: 125px;
+
+    display: inline-block;
+
+    background: ghostwhite;
+
+    position: fixed;
+    z-index: 10;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 75px 2px dimgray;
+
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+
+    padding: 30px;
+}
+
+button {
+    background: dimgray;
+    border-radius: 5px;
+
+    color: ghostwhite;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+button:focus {
+    background: silver;
+}
+
+.activeBox {
+    background: silver;
+}
+
+@keyframes larger {
+    from {
+        height: 75px;
+        width: 125px;
+    }
+
+    to {
+        height: 100px;
+        width: 250px;
+    }
+}
+
+span img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    pointer-events: none;
+}
